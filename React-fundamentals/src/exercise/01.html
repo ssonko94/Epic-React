@@ -25,13 +25,15 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="root"></div>
     <script type="module">
+      const rootElement = document.createElement('div')
+      rootElement.setAttribute('id', 'root')
+      document.body.appendChild(rootElement)
+
       const div = document.createElement('div')
       div.textContent = 'Hello World'
       div.classList.add('container')
-      const root = document.getElementById('root')
-      root.append(div)
+      rootElement.append(div)
     </script>
   </body>
 </html>
